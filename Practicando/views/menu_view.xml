@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <menuitem id="menu_practicando"
+            name="Practicando" />
+
+    <!-- Accion para el desplegable del menu -->
+
+    <act_window id="action_practicando"
+    name="Accion para practicando"
+    res_model="practicando.model"
+    view_mode="tree,form"
+    />
+
+    <!-- casilla para la barra = Book, Member -->
+  <menuitem id="menu_ticket1"
+    name="Ticket1"
+    parent="menu_practicando"
+    action="action_practicando"
+  />
+
+</odoo>

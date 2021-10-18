@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<odoo>
+  <record id="view_prac" model="ir.ui.view">
+    <field name="name">Prac Form</field>
+    <field name="model">practicando.model</field>
+    <field name="arch" type="xml">
+
+      <form>
+        <header>
+          <button name="check_prueba" type="object"
+            string="Botón de prueba" />
+        </header>
+        <sheet>
+          <group name="group">
+
+              <field name="texto_prueba" />
+              <field name="name" />
+              <field name="date" />
+
+          </group>
+        </sheet>
+      </form>
+
+    </field>
+  </record>
+
+  <record id="view_prac_arbol" model="ir.ui.view">
+    <field name="name">Prac Arbol</field>
+    <field name="model">practicando.model</field>
+    <field name="arch" type="xml">
+
+      <tree>
+              <field name="texto_prueba" />
+              <field name="name" />
+              <field name="date" />
+      </tree>
+
+    </field>
+  </record>
+
+</odoo>

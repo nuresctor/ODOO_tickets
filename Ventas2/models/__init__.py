@@ -1,0 +1,1 @@
+from . import ventas2_model

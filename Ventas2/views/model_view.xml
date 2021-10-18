@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<odoo>
+<!-- Añade la vista al conjunto de vistas -->
+  <record id="view_form_ventas2" model="ir.ui.view">
+    <field name="name">Referencia de pedido field</field>
+    <field name="model">sale.order</field>
+<!-- Pero oye, esta es heredada -->
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="arch" type="xml">
+<!-- -->
+      <field name="partner_id" position="after">
+        <field name="referencia_pedido" />
+      </field>
+<!-- XPATH -->
+      <xpath expr="//button[@name='action_quotation_send']" position="after">
+          <button name="button_cambio_fecha" type="object"
+          string="Añadir fecha de expiración" />
+      </xpath>
+
+    </field>
+  </record>
+</odoo>
