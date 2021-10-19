@@ -1,5 +1,6 @@
 from odoo import fields, models, api
 from datetime import datetime, date, time, timedelta
+from openerp.exceptions import except_orm
 
 class Ventas2(models.Model):
 
@@ -20,7 +21,18 @@ class Ventas2(models.Model):
         for rec in self:
             rec.validity_date=datetime.now()+timedelta(days=2)
 
-
-
-
-
+    def button_ventana_emergente_OPTIMO(self):
+        #import pdb;
+        #pdb.set_trace()
+        for rec in self:
+            res = {
+                'type': 'ir.actions.act_window',
+                'view_mode': 'tree,form',
+                'view_type': 'tree',
+                'res_model': 'product.template',
+                'target': 'new',
+                #'res_id': '',
+                #'view_id': '',
+                'domain': False,
+            }
+            return res
