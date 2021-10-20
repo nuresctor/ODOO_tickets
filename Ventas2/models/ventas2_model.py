@@ -26,9 +26,10 @@ class Ventas2(models.Model):
         #pdb.set_trace()
         for rec in self:
             res = {
+                #accion de abrir un modelo en una nueva ventana con el tipo de vista x
                 'type': 'ir.actions.act_window',
-                'view_mode': 'tree,form',
-                'view_type': 'tree',
+                'view_mode': 'form', #por defecto tree,form sin espacios
+                #'view_type': 'tree',
                 'res_model': 'product.template',
                 'target': 'new',
                 #'res_id': '',

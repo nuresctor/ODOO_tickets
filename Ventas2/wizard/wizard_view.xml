@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<odoo>
+  <record id="vista_ventas2_crear_producto" model="ir.ui.view">
+    <field name="name">Vista para el modelo Producto Wizard</field>
+    <field name="model">ventas2.crear.producto</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <field name="nombre_producto" />
+        </group>
+        <footer>
+          <button type="object"
+            name="button_send"
+            string="Crear" />
+          <button special="cancel"
+            string="Cancel"
+            class="btn-secondary" />
+        </footer>
+      </form>
+    </field>
+  </record>
+<!-- Para lanzar el asistente res-nombre del modelo del asistente src-módulo destino-->
+  <!--  src_model="product.template" view_type="form" -->
+
+ <act_window id="action_wizard_producto"
+      name="Send Messages"
+      res_model="ventas2.crear.producto"
+      view_mode="form"
+      view_id="vista_ventas2_crear_producto"
+      target="new"
+ />
+
+</odoo>

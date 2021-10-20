@@ -24,8 +24,8 @@
       </xpath>
 
          <xpath expr="//button[@name='button_ventana_emergente_OPTIMO']" position="before">
-          <button name="button_ventana_emergente" type="object"
-          string="Añadir producto"
+          <button name="%(action_wizard_producto)d" type="action"
+          string="Añadir producto WIZARD"
           />
       </xpath>
 

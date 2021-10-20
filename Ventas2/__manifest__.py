@@ -9,6 +9,7 @@
         #'security/ir.model.access.csv',
         #'views/menu_view.xml',
         'views/model_view.xml',
+        'wizard/wizard_view.xml',
     ],
 
 }
